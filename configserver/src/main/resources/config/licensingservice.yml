@@ -1,0 +1,22 @@
+server:
+  port: 8080
+signing.key: "345345fsdgsf5345"
+spring:
+  datasource:
+    username: root
+    password: root
+    url: jdbc:mysql://localhost:3306/eagle_eye_local
+  jpa:
+    properties.hibernate.dialect: org.hibernate.dialect.MySQL5Dialect
+    hibernate.ddl-auto: update
+    generate-ddl: true
+    show-sql: true
+security:
+  oauth2:
+    client:
+      clientId: eagleeye
+      clientSecret: secret
+      accessTokenUri: http://localhost:8901/oauth/token
+      userAuthorizationUri: http://localhost:8901/oauth/authorize
+    resource:
+      userInfoUri: http://localhost:8901/user

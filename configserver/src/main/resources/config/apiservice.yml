@@ -1,0 +1,8 @@
+server:
+  port: 5000
+zuul:
+  ignored-services: '*'
+  prefix: /api
+  routes:
+    licensingservice: /licensing/**
+zuul.sensitiveHeaders: Cookie,Set-Cookie
